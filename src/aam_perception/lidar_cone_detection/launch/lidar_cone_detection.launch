@@ -1,0 +1,27 @@
+<launch>
+  <node 
+    name="lidar_cone_detection"
+    pkg="lidar_cone_detection"
+    type="lidar_cone_detection.py"
+    output="screen"
+  />
+
+  <!--
+    <node 
+    name="map2odom_publisher"
+    pkg="ekf_slam"
+    type="map2odom.py"
+    output="screen"
+  />
+  -->
+
+  <node 
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find lidar_cone_detection)/rviz/rviz_config.rviz"
+  />
+
+
+
+</launch>
